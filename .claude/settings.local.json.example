@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch"
+    ]
+  },
+  "env": {
+    "TRACE_CODE_DIR": "/path/to/your/source-code-repo",
+    "TRACE_PAPER_DIR": "/path/to/this/thesis-workspace"
+  }
+}

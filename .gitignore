@@ -28,6 +28,9 @@ raw/papers/*.PDF
 # Claude local settings
 .claude/settings.local.json
 
+# Temp
+tmp/
+
 # --- 個人資産 (ディレクトリは残し中身は非公開) ---
 
 # 研究ストーリー
@@ -38,10 +41,9 @@ my-research/*
 paper/common/*
 !paper/common/.gitkeep
 
-# wiki (venues.md は共有)
+# wiki
 wiki/*
 !wiki/.gitkeep
-!wiki/venues.md
 !wiki/papers/
 !wiki/concepts/
 wiki/papers/*
