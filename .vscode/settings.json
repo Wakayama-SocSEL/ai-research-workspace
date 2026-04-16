@@ -1,0 +1,77 @@
+{
+    // --- このワークスペース専用の設定 ---
+
+    // コンパイルのレシピ
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "/Library/TeX/texbin/latexmk",
+            // 【追加】ここでPATH（道具箱の場所）を明示的に渡します
+            "env": {
+                "PATH": "/Library/TeX/texbin:/usr/bin:/bin:/usr/sbin:/sbin"
+            },
+            "args": [
+                "-e",
+                "$latex=q/uplatex %O -kanji=utf8 -no-guess-input-enc -synctex=1 -interaction=nonstopmode -file-line-error %S/",
+                "-e",
+                "$bibtex=q/upbibtex %O %B/",
+                "-e",
+                "$biber=q/biber %O --bblencoding=utf8 -u -U --output_safechars %B/",
+                "-e",
+                "$makeindex=q/upmendex %O -o %D %S/",
+                "-e",
+                "$dvipdf=q/dvipdfmx %O -o %D %S/",
+                "-norc",
+                "-gg",
+                "-pdfdvi",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (uplatex)",
+            "tools": [
+                "latexmk"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    // ファイルの入れ子表示（Nesting）を有効にする
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.tex": "${capture}.aux, ${capture}.log, ${capture}.dvi, ${capture}.fdb_latexmk, ${capture}.fls, ${capture}.synctex.gz, ${capture}.toc, ${capture}.out"
+    },
+    // textlintを有効化
+    "textlint.enable": true,
+    // 入力中にリアルタイムでチェックする（赤線を出す）
+    "textlint.run": "onType",
+    // ファイル保存時に自動修正（Auto Fix）を実行する
+    "textlint.autoFixOnSave": true,
+    // エディタの保存時にコードアクションを実行（textlintの修正を含む）
+    "editor.codeActionsOnSave": {
+        "source.fixAll.textlint": "explicit"
+    },
+    // 対象とするファイルの言語ID
+    "textlint.languages": [
+        "latex",
+        "tex",
+        "markdown",
+        "plaintext"
+    ],
+    // textlintの設定ファイルのパス
+    "textlint.configPath": ".textlintrc",
+    // 【重要】node_modules内のtextlintを使う設定
+    // これを書かなくても動くことが多いですが、明示するとトラブルが減ります
+    "textlint.nodePath": "./node_modules",
+    // textlintをワークスペースルートから実行
+    "textlint.workingDirectory": {
+        "directory": "."
+    },
+    // LaTeX ファイル専用の設定
+    "[latex]": {
+        "editor.wordWrap": "on"
+    }
+}

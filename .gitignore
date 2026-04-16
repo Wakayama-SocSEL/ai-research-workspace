@@ -1,0 +1,53 @@
+# Node
+node_modules/
+
+# macOS
+.DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.dvi
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+
+# Reference PDFs (copyright)
+raw/papers/*.pdf
+raw/papers/*.PDF
+
+# Claude local settings
+.claude/settings.local.json
+
+# --- 個人資産 (ディレクトリは残し中身は非公開) ---
+
+# 研究ストーリー
+my-research/*
+!my-research/.gitkeep
+
+# 論文共通素材
+paper/common/*
+!paper/common/.gitkeep
+
+# wiki (venues.md は共有)
+wiki/*
+!wiki/.gitkeep
+!wiki/venues.md
+!wiki/papers/
+!wiki/concepts/
+wiki/papers/*
+!wiki/papers/.gitkeep
+wiki/concepts/*
+!wiki/concepts/.gitkeep
+
+# ingest 履歴
+log.md

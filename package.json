@@ -1,0 +1,16 @@
+{
+	"scripts": {
+		"lint": "textlint '**/*.tex'",
+		"fix": "textlint --fix '**/*.tex'"
+	},
+	"devDependencies": {
+		"textlint": "^15.5.1",
+		"textlint-plugin-latex2e": "^1.2.1",
+		"textlint-rule-preset-ja-spacing": "^2.4.3",
+		"textlint-rule-preset-ja-technical-writing": "^12.0.2",
+		"textlint-rule-prh": "^6.1.0"
+	},
+	"dependencies": {
+		"list": "^2.0.19"
+	}
+}

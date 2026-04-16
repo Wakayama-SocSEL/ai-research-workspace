@@ -1,0 +1,34 @@
+{
+  "plugins": [
+    "latex2e"
+  ],
+  "rules": {
+    "preset-ja-technical-writing": {
+      "ja-no-mixed-period": {
+        "periodMark": "．"
+      },
+      "ja-no-mixed-comma": {
+        "commaMark": "，"
+      },
+      "no-mix-dearu-desumasu": {
+        "preferInHeader": "",
+        "preferInBody": "である",
+        "preferInList": "である",
+        "strict": true
+      },
+      "ja-no-comma-lost": true,
+      "no-exclamation-question-mark": false,
+      "no-full-width-number": true,
+      "max-kanji-continuous-len": false
+    },
+    "preset-ja-spacing": {
+      "ja-space-between-half-and-full-width": "always",
+      "ja-space-around-code": false
+    },
+    "prh": {
+      "rulePaths": [
+        "./prh.yml"
+      ]
+    }
+  }
+}
