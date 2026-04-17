@@ -53,3 +53,9 @@ wiki/concepts/*
 
 # ingest 履歴
 log.md
+
+# Skill evaluation workspace (private research content via response/grading)
+evals/
+
+# Claude Code scheduled tasks lock (runtime state)
+.claude/scheduled_tasks.lock
