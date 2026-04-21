@@ -42,7 +42,7 @@
     // ファイルの入れ子表示（Nesting）を有効にする
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
-        "*.tex": "${capture}.aux, ${capture}.log, ${capture}.dvi, ${capture}.fdb_latexmk, ${capture}.fls, ${capture}.synctex.gz, ${capture}.toc, ${capture}.out"
+        "*.tex": "${capture}.aux, ${capture}.log, ${capture}.dvi, ${capture}.fdb_latexmk, ${capture}.fls, ${capture}.synctex.gz, ${capture}.toc, ${capture}.out, ${capture}.bbl"
     },
     // textlintを有効化
     "textlint.enable": true,
