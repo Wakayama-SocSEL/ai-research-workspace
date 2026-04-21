@@ -30,6 +30,15 @@ sudo apt-get install texlive-full latexmk
 
 [mise](https://mise.jdx.dev/) で `paper/.mise.toml` に定義された Node.js・pnpm を一括セットアップする。
 
+miseの環境構築（miseの環境がある人はスキップ可能）
+```bash
+brew install mise.     # miseのインストール
+echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
+source ~/.zshrc.       # PATHをアクティベート
+mise doctor            # mise環境がセットアップされていることを確認
+```
+
+miseで必要なパッケージをインストール
 ```bash
 cd paper/
 mise install           # Node.js 22 + pnpm 10
@@ -47,8 +56,12 @@ pnpm install
 
 ### 使い方
 
+リント・フォーマット
 ```bash
 cd paper/
 pnpm lint              # .tex ファイルの校正チェック
 pnpm fix               # 自動修正可能なものを修正
 ```
+
+コンパイル
+VSCodeの左側にあるタブから緑の三角のボタンをクリックしてコンパイル

@@ -39,8 +39,13 @@ LaTeX 論文本体を置くディレクトリ．
 各論文では以下のように使う：
 
 ```latex
+\documentclass{article}
+\begin{document}
+ここにテキストを書く
+\end{document}
+\bibliographystyle{plain}
 \bibliography{../common/refs}
-\usepackage{../common/macros}
+\end{document}
 ```
 
 ## Overleaf 連携
