@@ -67,3 +67,7 @@ wiki は研究テーマが変わっても資産として残る。my-research は
 ## 論文ディレクトリの運用
 
 各論文は `paper/<venue>-<year>/` に独立した git リポジトリとして置ける (Overleaf 連携等)。詳細は [paper/README.md](paper/README.md) を参照。
+
+## License
+
+本リポジトリは [MIT License](LICENSE) で配布する。例外として `.agents/skills/skill-creator/` 配下は Apache License 2.0 の派生物 (詳細は同ディレクトリの [`LICENSE.txt`](.agents/skills/skill-creator/LICENSE.txt) / [`NOTICE`](.agents/skills/skill-creator/NOTICE) を参照)。
