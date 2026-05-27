@@ -374,14 +374,14 @@ Claude only invokes a skill for tasks it can't easily handle on its own. If a sh
 
 To force the skill into play, queries should include enough of the user's situation that solving it requires the skill's specific procedure / domain knowledge. Concretely:
 
-- **File paths and code snippets**, not just "this file": include the actual path (`mb_scanner/diff/boundary.py`) and a fragment of what's in it
+- **File paths and code snippets**, not just "this file": include the actual path (`src/diff/boundary.py`) and a fragment of what's in it
 - **A specific check the user wants done**, not a vague status question: "is this consistent with §4 C-1's pruning premise (N=1, execution-based)?" rather than "is this aligned?"
 - **References to artifacts the skill points at**: section numbers, schema fields, config keys — the things the skill is designed to cross-reference
 - **The user's own mental state**: what they tried, what they're stuck on, why they think this might be wrong
 
 Bad (will not trigger any skill, even with a perfect description): `"is the boundary code I'm writing aligned with the research plan?"`
 
-Good (substantive enough that Claude consults the skill): `"I'm writing \`mb_scanner/diff/boundary.py\`. It uses Python AST and takes the symmetric_difference of node sets to extract diff boundaries. Does this match the §4 C-1 (formalization of diff boundaries) requirement in current.md, especially the Hydra-style pruning premise (N=1, execution-based)? I'm worried that fixing the diff boundary before wildcard substitution might conflict with how pruning works."`
+Good (substantive enough that Claude consults the skill): `"I'm writing \`src/diff/boundary.py\`. It uses Python AST and takes the symmetric_difference of node sets to extract diff boundaries. Does this match the §4 C-1 (formalization of diff boundaries) requirement in current.md, especially the Hydra-style pruning premise (N=1, execution-based)? I'm worried that fixing the diff boundary before wildcard substitution might conflict with how pruning works."`
 
 If `recall = 0%` persists across iterations during optimization, **stop and revise the queries first** — don't keep iterating on descriptions, you're tuning the wrong knob.
 
